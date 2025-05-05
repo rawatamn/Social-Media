@@ -1,2 +1,31 @@
 [2025-05-05 11:10:26] [32minfo[39m: server is running
 [2025-05-05 11:10:26] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 17:10:19] [32minfo[39m: server is running
+[2025-05-05 17:10:20] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 17:10:20] [32minfo[39m: User table created successfully
+[2025-05-05 17:10:20] [32minfo[39m: Posts created successfully
+[2025-05-05 17:10:20] [32minfo[39m: Comments created successfully
+[2025-05-05 17:10:20] [32minfo[39m: Likes table created successfully
+[2025-05-05 17:46:20] [31merror[39m: API Error: User not foundWHERE parameter "id" has invalid "undefined" value
+[2025-05-05 17:47:05] [31merror[39m: API Error: User not foundWHERE parameter "id" has invalid "undefined" value
+[2025-05-05 17:49:23] [32minfo[39m: server is running
+[2025-05-05 17:49:23] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 17:49:23] [32minfo[39m: User table created successfully
+[2025-05-05 17:49:23] [32minfo[39m: Likes table created successfully
+[2025-05-05 17:49:23] [32minfo[39m: Posts created successfully
+[2025-05-05 17:49:23] [32minfo[39m: Comments created successfully
+[2025-05-05 17:49:33] [31merror[39m: API Error: User not foundWHERE parameter "id" has invalid "undefined" value
+[2025-05-05 17:49:35] [31merror[39m: API Error: User not foundWHERE parameter "id" has invalid "undefined" value
+[2025-05-05 17:51:38] [32minfo[39m: server is running
+[2025-05-05 17:51:38] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 17:51:38] [32minfo[39m: Comments created successfully
+[2025-05-05 17:51:38] [32minfo[39m: Posts created successfully
+[2025-05-05 17:51:38] [32minfo[39m: User table created successfully
+[2025-05-05 17:51:38] [32minfo[39m: Likes table created successfully
+[2025-05-05 17:51:43] [31merror[39m: API Error: User not foundWHERE parameter "id" has invalid "undefined" value
+[2025-05-05 17:58:57] [32minfo[39m: server is running
+[2025-05-05 17:58:57] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 17:58:57] [32minfo[39m: Posts created successfully
+[2025-05-05 17:58:57] [32minfo[39m: User table created successfully
+[2025-05-05 17:58:57] [32minfo[39m: Comments created successfully
+[2025-05-05 17:58:57] [32minfo[39m: Likes table created successfully

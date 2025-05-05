@@ -18,7 +18,7 @@ const addpost = async (req: Request, res: Response) => {
 
   try {
     await postschema.validate(req.body);
-    const isUserExist = await userService.findUser(user_id);
+    const isUserExist = await userService.findUser({ userId: user_id });
     //checking user exist or not
     if (!isUserExist) {
       APIResponse.error(
