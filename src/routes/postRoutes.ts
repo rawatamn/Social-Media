@@ -6,10 +6,11 @@ import {
   getSinglepost,
   updatepost,
 } from "../controller/postController.js";
+import { postRoutes } from "../utils/indexRoutes.js";
 const router = Router();
-router.post("/create", addpost);
-router.patch("/update", updatepost);
-router.delete("/delete", deletepost);
-router.get("/getAll", getallPost);
-router.get("/getsingle", getSinglepost);
+router.post(postRoutes.CREATE, addpost);
+router.patch(postRoutes.UPDATE, updatepost);
+router.delete(postRoutes.DELETE, deletepost);
+router.get(postRoutes.GETALL, getallPost);
+router.get(postRoutes.GETSINGLE, getSinglepost);
 export default router;

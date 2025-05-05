@@ -1,11 +1,12 @@
 import { DataTypes } from "sequelize";
-import dbConnect from "../config/dbConnect.js";
+import { sequelize } from "../config/dbConnect.js";
 import { nanoid } from "nanoid";
 import Posts from "./postsModel.js";
 import Users from "./usersModel.js";
 import Comments from "./commentsModel.js";
+import logger from "../utils/logger.js";
 
-const Likes = dbConnect.define(
+const Likes = sequelize.define(
   "Likes",
   {
     id: {
@@ -68,10 +69,10 @@ Likes.belongsTo(Comments, { foreignKey: "comment_id", as: "comment" });
 
 Likes.sync()
   .then(() => {
-    console.log("Likes table created successfully");
+    logger.info("Likes table created successfully");
   })
   .catch((error) => {
-    console.log("Error creating Likes table", error);
+    logger.error("Error creating Likes table", error);
   });
 
 export default Likes;

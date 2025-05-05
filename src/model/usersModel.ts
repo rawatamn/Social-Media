@@ -1,6 +1,7 @@
-import sequelize from "../config/dbConnect.js";
+import { sequelize } from "../config/dbConnect.js";
 import DataTypes from "sequelize";
 import { nanoid } from "nanoid";
+import logger from "../utils/logger.js";
 
 const Users = sequelize.define("users", {
   id: {
@@ -30,10 +31,10 @@ const Users = sequelize.define("users", {
 
 Users.sync()
   .then(() => {
-    console.log("Table created successfully");
+    logger.info("User table created successfully");
   })
   .catch((error) => {
-    console.error("Error creating table:", error);
+    logger.error("Error creating table:", error);
   });
 
 export default Users;

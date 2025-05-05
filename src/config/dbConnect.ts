@@ -1,5 +1,7 @@
 import { Sequelize } from "sequelize";
 import { config } from "dotenv";
+import logger from "../utils/logger.js";
+import MessageUtils from "../utils/messageUtils.js";
 config();
 const sequelize = new Sequelize(
   process.env.DB_name as string,
@@ -10,4 +12,12 @@ const sequelize = new Sequelize(
     dialect: "mysql",
   },
 );
-export default sequelize;
+const dbConnect = async () => {
+  try {
+    await sequelize.authenticate();
+    logger.info(MessageUtils.SUCCESS.DATABASE_CONNECTION_SUCESSFUL);
+  } catch (error: any) {
+    logger.error(MessageUtils.ERROR.UNABLE_TO_CONNECT_DATABASE, error.message);
+  }
+};
+export { sequelize, dbConnect };

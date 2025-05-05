@@ -1,9 +1,10 @@
 import { DataTypes } from "sequelize";
-import dbConnect from "../config/dbConnect.js";
+import { sequelize } from "../config/dbConnect.js";
 import { nanoid } from "nanoid";
 import Users from "./usersModel.js";
+import logger from "../utils/logger.js";
 
-const Posts = dbConnect.define(
+const Posts = sequelize.define(
   "Posts",
   {
     id: {
@@ -45,10 +46,10 @@ Posts.belongsTo(Users, { foreignKey: "user_id" });
 
 Posts.sync()
   .then(() => {
-    console.log("Posts created successfully");
+    logger.info("Posts created successfully");
   })
   .catch((error) => {
-    console.log("Error creating table", error);
+    logger.error("Error creating table", error);
   });
 
 export default Posts;

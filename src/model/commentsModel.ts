@@ -1,9 +1,10 @@
 import { DataTypes } from "sequelize";
-import dbConnect from "../config/dbConnect.js";
+import { sequelize } from "../config/dbConnect.js";
 import { nanoid } from "nanoid";
 import Posts from "./postsModel.js";
 import Users from "./usersModel.js";
-const Comments = dbConnect.define(
+import logger from "../utils/logger.js";
+const Comments = sequelize.define(
   "Comments",
   {
     id: {
@@ -57,9 +58,9 @@ Comments.belongsTo(Comments, { foreignKey: "parentId", as: "parentComment" });
 
 Comments.sync()
   .then(() => {
-    console.log("Comments created successfully");
+    logger.info("Comments created successfully");
   })
   .catch((error) => {
-    console.log("Error creating comment", error);
+    logger.error("Error creating comment", error);
   });
 export default Comments;

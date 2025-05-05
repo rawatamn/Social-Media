@@ -43,7 +43,6 @@ const commentService = {
 
       return newComment;
     } catch (error: any) {
-      console.error("Error adding comment:", error.message);
       throw new Error(error.message);
     }
   },
