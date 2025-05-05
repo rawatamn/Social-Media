@@ -7,7 +7,7 @@ import MessageUtils from "./utils/messageUtils.js";
 config();
 
 const app: Application = express();
-const port: number = 3000;
+
 
 sequelize
   .authenticate()
@@ -21,6 +21,6 @@ app.use(express.json());
 
 app.use("/api", allRoutes);
 
-app.listen(port, () => {
+app.listen(Number(process.env.PORT), () => {
   console.log("server is running");
 });
