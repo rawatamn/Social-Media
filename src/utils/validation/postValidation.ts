@@ -7,6 +7,7 @@ const postschema = yup.object({
 
 const updatePostSchema = yup.object({
   id: yup.string().required(),
+  user_id: yup.string().required("User ID is required"),
   updateData: yup.object({
     image: yup.string().optional(),
     caption: yup.string().optional(),

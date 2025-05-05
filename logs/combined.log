@@ -29,3 +29,16 @@
 [2025-05-05 17:58:57] [32minfo[39m: User table created successfully
 [2025-05-05 17:58:57] [32minfo[39m: Comments created successfully
 [2025-05-05 17:58:57] [32minfo[39m: Likes table created successfully
+[2025-05-05 18:00:45] [32minfo[39m: server is running
+[2025-05-05 18:00:45] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 18:00:45] [32minfo[39m: Posts created successfully
+[2025-05-05 18:00:45] [32minfo[39m: Comments created successfully
+[2025-05-05 18:00:45] [32minfo[39m: User table created successfully
+[2025-05-05 18:00:45] [32minfo[39m: Likes table created successfully
+[2025-05-05 18:25:40] [32minfo[39m: server is running
+[2025-05-05 18:25:40] [32minfo[39m: Database connection established sucessfully
+[2025-05-05 18:25:40] [32minfo[39m: Comments created successfully
+[2025-05-05 18:25:40] [32minfo[39m: Likes table created successfully
+[2025-05-05 18:25:40] [32minfo[39m: Posts created successfully
+[2025-05-05 18:25:40] [32minfo[39m: User table created successfully
+[2025-05-05 18:25:51] [31merror[39m: API Error: User ID is required

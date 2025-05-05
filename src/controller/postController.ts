@@ -46,10 +46,19 @@ const updatepost = async (req: Request, res: Response) => {
   try {
     //validating the data
     const validatedData = await updatePostSchema.validate(
-      { id: req.body.post_id, updateData: req.body },
+      { id: req.body.post_id,user_id:req.body.user_id, updateData: req.body },
       { abortEarly: false },
     );
+    const isUserExist = await userService.findUser({ userId: validatedData.user_id });
 
+    //checking user exist or not
+    if (!isUserExist) {
+      APIResponse.error(
+        res,
+        MessageUtils.ERROR.USER_NOT_FOUND,
+        HttpStatusCodes.NOT_FOUND,
+      );
+    }
     //checking post exist or not
     const isPostExist = await postService.findPost({
       post_id: validatedData.id,
